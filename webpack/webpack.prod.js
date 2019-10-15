@@ -69,7 +69,14 @@ module.exports = {
       hash: true,
       template: './' + src_Path + '/index.twig',
       filename: 'index.html',
-      minify: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     }),
     new WebpackMd5Hash()
   ]
