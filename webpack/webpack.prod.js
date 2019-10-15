@@ -48,7 +48,13 @@ module.exports = {
             loader: selectedPreprocessor.loaderName
           }
         ]
-      },
+      }, {
+        test: /\.twig$/,
+        use: [
+          'raw-loader',
+          'twig-html-loader'
+        ]
+      }
     ]
   },
   plugins: [
@@ -59,10 +65,11 @@ module.exports = {
       filename: 'style.[contenthash].css'
     }),
     new HtmlWebpackPlugin({
-      inject: false,
+      inject: true,
       hash: true,
-      template: './' + src_Path + '/index.html',
-      filename: 'index.html'
+      template: './' + src_Path + '/index.twig',
+      filename: 'index.html',
+      minify: true,
     }),
     new WebpackMd5Hash()
   ]

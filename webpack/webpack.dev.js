@@ -55,6 +55,12 @@ module.exports = {
           }
         },
       ]
+    }, {
+      test: /\.twig$/,
+      use: [
+        'raw-loader',
+        'twig-html-loader'
+      ]
     }]
   },
   plugins: [
@@ -62,9 +68,9 @@ module.exports = {
       filename: 'style.css'
     }),
     new HtmlWebpackPlugin({
-      inject: false,
+      inject: true,
       hash: false,
-      template: './' + src_Path + '/index.html',
+      template: './' + src_Path + '/index.twig',
       filename: 'index.html'
     })
   ]
