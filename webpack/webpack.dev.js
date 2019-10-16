@@ -58,8 +58,31 @@ module.exports = {
     }, {
       test: /\.twig$/,
       use: [
-        'raw-loader',
-        'twig-html-loader'
+        {
+          loader:'html-loader',
+          options: {
+            attrs: ['link:href', ':data-src', ':src']
+          }
+        },
+        {
+          loader: 'twig-html-loader',
+          options: {
+            functions: {
+              asset(path) {
+                // const img = require('./'+src_Path+path);
+                // console.log('./'+src_Path+path, img);
+                return path;
+              }
+            },
+          },
+        },
+      ]
+    }, {
+      test: /.*\.(gif|png|jpe?g)$/i,
+      use:  [
+        {
+          loader: 'file-loader?name=[name].[ext]'
+        }
       ]
     }]
   },
