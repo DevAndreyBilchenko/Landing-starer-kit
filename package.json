@@ -31,7 +31,7 @@
     "ts-loader": "^4.4.2",
     "twig-html-loader": "^0.1.7",
     "twig-loader": "^0.5.1",
-    "typescript": "^3.0.1",
+    "typescript": "^3.6.4",
     "webpack": "^4.10.2",
     "webpack-cli": "^3.0.1",
     "webpack-dev-server": "^3.2.1",
