@@ -38,6 +38,8 @@
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
-    "css-reset-and-normalize": "^1.0.1"
+    "@types/jquery": "^3.3.31",
+    "css-reset-and-normalize": "^1.0.1",
+    "jquery": "^3.4.1"
   }
 }

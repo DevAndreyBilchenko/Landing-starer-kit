@@ -68,7 +68,7 @@ module.exports = {
           loader: 'twig-html-loader',
           options: {
             functions: {
-              asset(path) {
+              src(path) {
                 // const img = require('./'+src_Path+path);
                 // console.log('./'+src_Path+path, img);
                 return path;
