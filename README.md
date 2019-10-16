@@ -1,4 +1,4 @@
-# Webpack 4 Boilerplate Typescript/Sass with build-in option to change preprocessor (less/stylus)
+# Starter kit for Landing page with TS, SASS,LESS/STYLUS and Twig
 This Webpack 4 Boilerplate comes with 2 builds:
 
 --> <code>npm run build:dev</code><br>
